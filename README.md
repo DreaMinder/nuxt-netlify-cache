@@ -35,7 +35,7 @@ This is a more complicated approach that removes bundle-build process entirely. 
 - Add a new command to `package.json`
 ```js
 "scripts": {
-  "generate:cached": "nuxt-netlify-cache/bin/generate.js",
+  "generate:cached": "nuxt-netlify-cache",
 ...
 ```
 - Cange your Netlify Build Command to `npm run generate:cached`
@@ -46,4 +46,4 @@ This is a more complicated approach that removes bundle-build process entirely. 
 
 ## Caveats
 
-Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing this and can't say it's reliable for production use.
+Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's reliable for production use.

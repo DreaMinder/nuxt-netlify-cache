@@ -10,6 +10,7 @@
   "homepage": "https://github.com/DreaMinder/nuxt-netlify-cache",
   "license": "MIT",
   "main": "lib/module.js",
+  "bin": "bin/generate.js",
   "name": "nuxt-netlify-cache",
   "publishConfig": {
     "access": "public"
@@ -18,5 +19,5 @@
     "type": "git",
     "url": "git+https://github.com/DreaMinder/nuxt-netlify-cache.git"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
