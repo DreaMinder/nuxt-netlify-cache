@@ -6,12 +6,12 @@ Nuxt.js module that helps to speed up a content update on Netlify platform by 20
 
 This package can be used in two ways: *Module* and *Advanced*. But generally, the flow looks like this:
 1. Save .nuxt dir to netlify cache dir on a redeploy.
-2. Detect a redeploy that has been triggered with a HTTP-request using (netlify hook)[https://docs.netlify.com/configure-builds/build-hooks/].
+2. Detect a redeploy that has been triggered with a HTTP-request using [netlify hook](https://docs.netlify.com/configure-builds/build-hooks/).
 3. If this request has a special flag inside, restore .nuxt dir from cache and try to use it to speed up the process.
 
 ### Module usage
 
-This is a simplified approach, but not the fastest one. It uses (webpack-cache)[https://nuxtjs.org/api/configuration-build/#cache] feature to speed up bundle build process.
+This is a simplified approach, but not the fastest one. It uses [webpack-cache](https://nuxtjs.org/api/configuration-build/#cache) feature to speed up bundle build process.
 
 - Add `nuxt-netlify-cache` dependency
 - Define nuxt module:
@@ -46,4 +46,4 @@ This is a more complicated approach that removes bundle-build process entirely. 
 
 ## Caveats
 
-Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar Gatsby plugin is working fine though https://github.com/axe312ger/gatsby-plugin-netlify-cache/). I'm still testing this and can't say it's reliable for production use.
+Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing this and can't say it's reliable for production use.
