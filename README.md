@@ -36,7 +36,6 @@ This is a more complicated approach that removes bundle-build process entirely. 
 ```js
 "scripts": {
   "generate:cached": "nuxt-netlify-cache",
-...
 ```
 - Cange your Netlify Build Command to `npm run generate:cached`
 - Add a special flag `use_cache` to your netlify-hook as follows:
@@ -46,4 +45,4 @@ This is a more complicated approach that removes bundle-build process entirely. 
 
 ## Caveats
 
-Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's reliable for production use.
+Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's reliable for production use. Also keep in mind that Advanced strategy uses `--no-build` flag for `nuxt generate` which means it will only generate routes specified in nuxt.config.js, unspecified static routes will be ignored.
