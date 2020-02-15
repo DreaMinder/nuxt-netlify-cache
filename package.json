@@ -3,7 +3,7 @@
     "name": "DreaMinder",
     "email": "dreaminder7@gmail.com"
   }],
-  "description": "Nuxt.js module that uses netlify cache to skip build step on nuxt-generate",
+  "description": "Nuxt.js module that uses netlify cache to speed up redeploy",
   "files": [
     "lib"
   ],
@@ -19,5 +19,5 @@
     "type": "git",
     "url": "git+https://github.com/DreaMinder/nuxt-netlify-cache.git"
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

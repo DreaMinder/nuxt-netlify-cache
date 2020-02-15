@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const { init, saveCache, restoreCache } = require('../lib/module')
 
 const cacheFlag = 'use_cache'
@@ -19,8 +18,6 @@ const execCommand = (cmd) => {
 
 (async () => {
   const { paths, useSavedCache } = await init(cacheFlag, { rootDir, buildDir })
-
-  console.log('nuxt-netlify-cache: running cached nuxt-generate')
   if (!paths) throw new Error('nuxt-netlify-cache: cli-generate should be used in netlify environment')
 
   if (useSavedCache) {
@@ -31,21 +28,3 @@ const execCommand = (cmd) => {
     await saveCache(paths)
   }
 })()
-
-
-// This implementation should be better but it didn't work because of non-transpiled imports in nuxt.config
-
-// const { Nuxt, Generator } = require('nuxt/dist/nuxt')
-
-// const root = process.cwd()
-// const config = require(root + '/nuxt.config.js')
-// const { triggerCache } = require('./modules/nuxt-netlify-cache')
-
-// const nuxt = new Nuxt(config)
-// const generator = new Generator(nuxt)
-
-// const main = async () => {
-//   triggerCache('restore', { rootDir: root, buildDir: root + '/.nuxt/' })
-//   await generator.generate({ build: false })
-//   triggerCache('save', { rootDir: root, buildDir: root + '/.nuxt/' })
-// }

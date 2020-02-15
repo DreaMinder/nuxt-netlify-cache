@@ -1,6 +1,6 @@
 # Nuxt netlify cache
 
-Nuxt.js module that helps to speed up a content update on Netlify platform by 20-200%.
+Nuxt.js module that helps to speed up Netlify content updates by 20%-80%.
 
 ## Strategies
 
@@ -22,7 +22,7 @@ This is a simplified approach, but not the fastest one. It uses [webpack-cache](
   ]
 }
 ```
-- Add a special flag `use_cache` (flag value changeable with module options) to your netlify-hook as follows:
+- Add a special flag `use_cache` (flag value changeable with module options) to your netlify-hook like this:
 `https://api.netlify.com/build_hooks/XXXXXXXXXXXXXXX?trigger_title=Your+title+use_cache`
 - Add updated netlify-hook URL to your CMS and check netlify deploy-logs to make sure netlify-cache kicked in
 
@@ -45,4 +45,4 @@ This is a more complicated approach that removes bundle-build process entirely. 
 
 ## Caveats
 
-Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's reliable for production use. Also keep in mind that Advanced strategy uses `--no-build` flag for `nuxt generate` which means it will only generate routes specified in nuxt.config.js, unspecified static routes will be ignored.
+Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's 100% reliable for production use. Also keep in mind that Advanced strategy uses `--no-build` flag for `nuxt generate` which means it will only generate routes specified in nuxt.config.js, unspecified static routes will be ignored.
