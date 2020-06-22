@@ -22,6 +22,7 @@ This is a simplified approach, but not the fastest one. It uses [webpack-cache](
   ]
 }
 ```
+- Make sure your `generate` script includes build command: `nuxt build && nuxt export`
 - Add a special flag `use_cache` (flag value changeable with module options) to your netlify-hook like this:
 `https://api.netlify.com/build_hooks/XXXXXXXXXXXXXXX?trigger_title=Your+title+use_cache`
 - Add updated netlify-hook URL to your CMS and check netlify deploy-logs to make sure netlify-cache kicked in
