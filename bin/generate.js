@@ -22,9 +22,9 @@ const execCommand = (cmd) => {
 
   if (useSavedCache) {
     await restoreCache(paths)
-    await execCommand('nuxt generate --no-build')
+    await execCommand('nuxt export')
   } else {
-    await execCommand('nuxt generate')
+    await execCommand('nuxt build && nuxt export')
     await saveCache(paths)
   }
 })()
