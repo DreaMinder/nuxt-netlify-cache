@@ -29,7 +29,7 @@ This is a simplified approach, but not the fastest one. It uses [webpack-cache](
 
 ### Advanced usage
 
-This is a more complicated approach that removes bundle-build process entirely. It saves cache the same way as it does in the module approach, but this time if it detects `use_cache` flag in redeploy request, it runs `nuxt generate --no-build` instead of `nuxt generate`.
+This is a more complicated approach that removes bundle-build process entirely. It saves cache the same way as it does in the module approach, but this time if it detects `use_cache` flag in redeploy request, it runs `nuxt export` instead of `nuxt build && nuxt export`.
 
 - Add `nuxt-netlify-cache` dependency
 - Add a new command to `package.json`
@@ -43,6 +43,6 @@ This is a more complicated approach that removes bundle-build process entirely. 
 - Check netlify deploy-logs to make sure netlify-cache kicked in
 
 
-## Caveats
+## Old Nuxt < v2.13
 
-Netlify cache dir is not documented and related to beta-features that may change or break something (but a simillar [Gatsby plugin](https://github.com/axe312ger/gatsby-plugin-netlify-cache/) is working fine though). I'm still testing and can't say if it's 100% reliable for production use. Also keep in mind that Advanced strategy uses `--no-build` flag for `nuxt generate` which means it will only generate routes specified in nuxt.config.js, unspecified static routes will be ignored.
+`nuxt generate` has been renamed to `nuxt export` in Nuxt.js version >= v2.13. If you are still using old version, you need to use version v0.0.3 of this package.
