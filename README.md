@@ -38,7 +38,7 @@ This is a more complicated approach that removes bundle-build process entirely. 
 "scripts": {
   "generate:cached": "nuxt-netlify-cache",
 ```
-- Cange your Netlify Build Command to `npm run generate:cached`
+- Change your Netlify Build Command to `npm run generate:cached`
 - Add a special flag `use_cache` to your netlify-hook as follows:
 `https://api.netlify.com/build_hooks/XXXXXXXXXXXXXXX?trigger_title=Your+title+use_cache`
 - Check netlify deploy-logs to make sure netlify-cache kicked in
