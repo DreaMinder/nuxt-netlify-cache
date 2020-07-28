@@ -2,6 +2,8 @@
 
 Nuxt.js module that helps to speed up Netlify content updates by 20%-80%.
 
+⚠️⚠️⚠️ This feature has been [implemented as native](https://nuxtjs.org/blog/nuxt-static-improvements) in Nuxt.js 2.14.0. You might want to upgrade and try it out before using this module, it is much more straightforward. ⚠️⚠️⚠️
+
 ## Strategies
 
 This package can be used in two ways: *Module* and *Advanced*. But generally, the flow looks like this:
